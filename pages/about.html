@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1" />
+	<title>Glide in! - Under Construction</title>
+	<meta name="description" content="Login page under construction" />
+	
+	<!-- Google Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Gorditas&family=Metal+Mania&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+	
+	<!-- Styles -->
+	<link rel="stylesheet" href="../styles.css">
+	<link rel="stylesheet" href="../assets/under-construction.css">
+</head>
+
+<body>
+	<header class="top-nav">
+		<a href="../index.html" class="home-link">← Tide/Light</a>
+		<a href="about.html" class="about-link">Glide in!</a>
+	</header>
+
+	<main class="construction-page">
+		<div class="construction-content">
+			<h1 class="construction-title">Glide in!</h1>
+			<p class="construction-subtitle">Login Portal</p>
+			
+			<div class="status-badge">🚧 Under Construction 🚧</div>
+			
+			<!-- Half-built login form -->
+			<div class="login-container">
+				<div class="form-element partial">
+					<label for="email">Email</label>
+					<input type="email" id="email" placeholder="your@email.com" disabled>
+				</div>
+				
+				<div class="form-element skeleton">
+					<div class="skeleton-label"></div>
+					<div class="skeleton-input"></div>
+				</div>
+				
+				<div class="form-element wireframe">
+					<div class="wireframe-box">
+						<span>[ Button Placeholder ]</span>
+					</div>
+				</div>
+				
+				<div class="construction-note">
+					<p>🔨 Still hammering out the details...</p>
+					<p class="small-text">Google OAuth integration coming soon!</p>
+				</div>
+			</div>
+			
+			<!-- Progress indicator -->
+			<div class="progress-section">
+				<p class="progress-label">Construction Progress</p>
+				<div class="progress-bar">
+					<div class="progress-fill" style="width: 35%"></div>
+				</div>
+				<p class="progress-text">35% Complete</p>
+			</div>
+			
+			<div class="tools-section">
+				<span class="tool">🔧</span>
+				<span class="tool">🛠️</span>
+				<span class="tool">⚙️</span>
+				<span class="tool">🔩</span>
+			</div>
+		</div>
+	</main>
+
+	<script>
+		// Force light mode only for about page
+		document.body.classList.add('light-mode');
+		document.body.classList.remove('tide-mode');
+
+		// Animate tools
+		document.addEventListener('DOMContentLoaded', () => {
+			const tools = document.querySelectorAll('.tool');
+			tools.forEach((tool, index) => {
+				setInterval(() => {
+					tool.style.transform = `translateY(-5px) rotate(${Math.random() * 20 - 10}deg)`;
+					setTimeout(() => {
+						tool.style.transform = 'translateY(0) rotate(0deg)';
+					}, 300);
+				}, 2000 + index * 500);
+			});
+		});
+	</script>
+</body>
+</html>

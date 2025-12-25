@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1" />
+	<title>Tide/Light</title>
+	<meta name="description" content="A daily rhythm of music, books, and games. Three blogs, one journey." />
+	
+	<!-- Google Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Gorditas&family=Metal+Mania&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+	
+	<!-- Styles -->
+	<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+	<header class="top-right">
+		<a href="pages/about.html">Glide in!</a>
+	</header>
+
+	<main class="hero">
+		<h1>
+			<span class="tide">Tide</span><span class="slash">/</span><span class="light">Light</span>
+		</h1>
+		<p class="tagline">
+			Bridge. Tale. Quest.
+		</p>
+		<p class="signature">- idhant &lt;3</p>
+	</main>
+
+	<section class="sections">
+		<div class="blog-cards">
+			<a href="pages/sunrise-lyra.html" class="blog-card sunrise">
+				<h2>The Sunrise Lyra</h2>
+			</a>
+
+			<a href="pages/highnoon-parchment.html" class="blog-card parchment">
+				<h2>The Highnoon Parchment</h2>
+			</a>
+
+			<a href="pages/moonlit-senet.html" class="blog-card senet">
+				<h2>The Moonlit Senet</h2>
+			</a>
+		</div>
+	</section>
+
+	<script>
+		// Manual theme switchers
+		function setTideMode() {
+			document.body.classList.add('tide-mode');
+			document.body.classList.remove('light-mode');
+			localStorage.setItem('theme', 'tide');
+		}
+
+		function setLightMode() {
+			document.body.classList.add('light-mode');
+			document.body.classList.remove('tide-mode');
+			localStorage.setItem('theme', 'light');
+		}
+
+		// Time-based theme switcher (only if no manual preference)
+		function setThemeBasedOnTime() {
+			const savedTheme = localStorage.getItem('theme');
+			if (savedTheme) {
+				// Use saved preference
+				if (savedTheme === 'tide') {
+					document.body.classList.add('tide-mode');
+					document.body.classList.remove('light-mode');
+				} else {
+					document.body.classList.add('light-mode');
+					document.body.classList.remove('tide-mode');
+				}
+			} else {
+				// Use time-based switching
+				const hour = new Date().getHours();
+				const isLightMode = hour >= 6 && hour < 18;
+				
+				if (isLightMode) {
+					document.body.classList.add('light-mode');
+					document.body.classList.remove('tide-mode');
+				} else {
+					document.body.classList.add('tide-mode');
+					document.body.classList.remove('light-mode');
+				}
+			}
+		}
+
+		// Set theme on load
+		setThemeBasedOnTime();
+
+		// Add click handlers to Tide/Light text
+		document.addEventListener('DOMContentLoaded', () => {
+			const tideSpan = document.querySelector('.hero h1 .tide');
+			const lightSpan = document.querySelector('.hero h1 .light');
+
+			if (tideSpan) {
+				tideSpan.addEventListener('click', setTideMode);
+			}
+
+			if (lightSpan) {
+				lightSpan.addEventListener('click', setLightMode);
+			}
+		});
+	</script>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1" />
+	<title>Coming Soon - The Moonlit Senet</title>
+	<meta name="description" content="The first post is coming soon" />
+	
+	<!-- Google Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Gorditas&family=Metal+Mania&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+	
+	<!-- Styles -->
+	<link rel="stylesheet" href="../../styles.css">
+	<link rel="stylesheet" href="../../assets/blog-post-styles.css">
+</head>
+
+<body>
+	<header class="top-nav">
+		<a href="../../pages/moonlit-senet.html" class="back-link">← The Moonlit Senet</a>
+		<a href="../../pages/about.html" class="about-link">Glide in!</a>
+	</header>
+
+	<article class="blog-post">
+		<!-- Blog Header with Game Info -->
+		<header class="post-header">
+			<div class="post-meta">
+				<span class="serial-number">#001</span>
+				<time class="post-date">December 25, 2025</time>
+				
+				<div class="song-info">
+					<h1 class="song-name">Coming Soon</h1>
+					<p class="album-name">Level One</p>
+					<p class="artist-name">The Moonlit Senet</p>
+				</div>
+			</div>
+			
+			<div class="cover-art">
+				<img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=600&q=80" alt="Gaming controller">
+			</div>
+		</header>
+
+		<!-- Blog Content -->
+		<div class="post-content">
+			<h2>Player One, Ready?</h2>
+			
+			<p>Every adventure starts with pressing Start. The Moonlit Senet is getting ready to share monthly chronicles about games that captivate us, mechanics that inspire us, and the digital worlds we explore.</p>
+
+			<p>This space will soon feature deep dives into game design, reflections on gaming culture, and stories about the experiences that stay with us long after the credits roll.</p>
+
+			<blockquote>
+				"The game is not about becoming somebody, it's about becoming nobody." — Ram Dass (adapted for gaming)
+			</blockquote>
+
+			<p>The first proper post will be published next month. The quest begins soon.</p>
+
+			<div class="post-footer">
+				<p><em>The first Moonlit Senet post is loading. Stay in the game.</em></p>
+			</div>
+		</div>
+	</article>
+
+	<script>
+		// Theme switcher functions
+		function setTideMode() {
+			document.body.classList.add('tide-mode');
+			document.body.classList.remove('light-mode');
+			localStorage.setItem('theme', 'tide');
+		}
+
+		function setLightMode() {
+			document.body.classList.add('light-mode');
+			document.body.classList.remove('tide-mode');
+			localStorage.setItem('theme', 'light');
+		}
+
+		// Time-based theme switcher
+		function setThemeBasedOnTime() {
+			const savedTheme = localStorage.getItem('theme');
+			if (savedTheme) {
+				if (savedTheme === 'tide') {
+					document.body.classList.add('tide-mode');
+					document.body.classList.remove('light-mode');
+				} else {
+					document.body.classList.add('light-mode');
+					document.body.classList.remove('tide-mode');
+				}
+			} else {
+				const hour = new Date().getHours();
+				const isLightMode = hour >= 6 && hour < 18;
+				
+				if (isLightMode) {
+					document.body.classList.add('light-mode');
+					document.body.classList.remove('tide-mode');
+				} else {
+					document.body.classList.add('tide-mode');
+					document.body.classList.remove('light-mode');
+				}
+			}
+		}
+
+		// Set theme on load
+		setThemeBasedOnTime();
+	</script>
+</body>
+</html>

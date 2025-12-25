@@ -1,0 +1,98 @@
+/*
+  The Highnoon Parchment Theme
+  Scholarly, high-contrast - Sun-drenched library at noon
+*/
+
+/* Override theme colors for Highnoon Parchment */
+body {
+	--bg-primary: #F9F7F2;
+	--bg-secondary: #FFFFFF;
+	--card-bg: #FFFFFF;
+	--text-primary: #1A1A1A;
+	--text-secondary: #5F5F5F;
+	--accent: #BC6C25;
+	--accent-hover: #BC6C25;
+	--whimsical-highlight: rgba(188, 108, 37, 0.08);
+}
+
+/* Override body background */
+body {
+	background-color: #F9F7F2;
+	background-image: none;
+}
+
+/* Highnoon Parchment title with new gradient */
+.parchment-title {
+	font-family: 'UnifrakturMaguntia', serif;
+	font-size: 3.6rem;
+	line-height: 1.2;
+	padding-top: 0.5rem;
+	background: linear-gradient(135deg, #D4A373, #A98467);
+	-webkit-background-clip: text;
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+body .parchment-title {
+	text-shadow: none;
+}
+
+/* Featured card styling */
+.featured-card {
+	background: #FFFFFF;
+	box-shadow: 0 4px 20px rgba(188, 108, 37, 0.12);
+}
+
+.featured-card:hover {
+	box-shadow: 0 12px 40px rgba(188, 108, 37, 0.15);
+	transform: translateY(-8px);
+}
+
+/* Post cards */
+.post-card {
+	background: #FFFFFF;
+	box-shadow: 0 2px 10px rgba(188, 108, 37, 0.08);
+}
+
+.post-card:hover {
+	box-shadow: 0 6px 20px rgba(188, 108, 37, 0.15);
+}
+
+/* Date badges */
+.post-date {
+	color: #BC6C25;
+}
+
+/* Section divider */
+.section-title::after {
+	background: #BC6C25;
+}
+
+/* Navigation buttons */
+.top-nav a {
+	color: #5F5F5F;
+	border-color: #5F5F5F;
+}
+
+.top-nav a:hover {
+	color: #BC6C25;
+	border-color: #BC6C25;
+}
+
+/* Read more link */
+.read-more {
+	color: #BC6C25;
+}
+
+/* Primary text elements */
+.post-title,
+.post-card-content h3 {
+	color: #1A1A1A;
+}
+
+/* Secondary text */
+.post-excerpt,
+.post-card-content p,
+.listing-tagline {
+	color: #5F5F5F;
+}

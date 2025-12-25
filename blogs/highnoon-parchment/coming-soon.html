@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1" />
+	<title>Coming Soon - The Highnoon Parchment</title>
+	<meta name="description" content="The first post is coming soon" />
+	
+	<!-- Google Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Gorditas&family=Metal+Mania&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+	
+	<!-- Styles -->
+	<link rel="stylesheet" href="../../styles.css">
+	<link rel="stylesheet" href="../../assets/blog-post-styles.css">
+</head>
+
+<body>
+	<header class="top-nav">
+		<a href="../../pages/highnoon-parchment.html" class="back-link">← The Highnoon Parchment</a>
+		<a href="../../pages/about.html" class="about-link">Glide in!</a>
+	</header>
+
+	<article class="blog-post">
+		<!-- Blog Header with Book Info -->
+		<header class="post-header">
+			<div class="post-meta">
+				<span class="serial-number">#001</span>
+				<time class="post-date">December 25, 2025</time>
+				
+				<div class="song-info">
+					<h1 class="song-name">Coming Soon</h1>
+					<p class="album-name">First Edition</p>
+					<p class="artist-name">The Highnoon Parchment</p>
+				</div>
+			</div>
+			
+			<div class="cover-art">
+				<img src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=600&q=80" alt="Open book">
+			</div>
+		</header>
+
+		<!-- Blog Content -->
+		<div class="post-content">
+			<h2>The First Chapter</h2>
+			
+			<p>Every great story begins with turning the first page. The Highnoon Parchment is preparing to share weekly reflections on the books that shape us, the stories that stay with us, and the words that change us.</p>
+
+			<p>This space will soon hold literary wanderings, book discoveries, and thoughts on the written word in all its forms.</p>
+
+			<blockquote>
+				"A reader lives a thousand lives before he dies. The man who never reads lives only one." — George R.R. Martin
+			</blockquote>
+
+			<p>The first proper post arrives next week. The page is turning.</p>
+
+			<div class="post-footer">
+				<p><em>The first Highnoon Parchment post is being written. Check back soon.</em></p>
+			</div>
+		</div>
+	</article>
+
+	<script>
+		// Theme switcher functions
+		function setTideMode() {
+			document.body.classList.add('tide-mode');
+			document.body.classList.remove('light-mode');
+			localStorage.setItem('theme', 'tide');
+		}
+
+		function setLightMode() {
+			document.body.classList.add('light-mode');
+			document.body.classList.remove('tide-mode');
+			localStorage.setItem('theme', 'light');
+		}
+
+		// Time-based theme switcher
+		function setThemeBasedOnTime() {
+			const savedTheme = localStorage.getItem('theme');
+			if (savedTheme) {
+				if (savedTheme === 'tide') {
+					document.body.classList.add('tide-mode');
+					document.body.classList.remove('light-mode');
+				} else {
+					document.body.classList.add('light-mode');
+					document.body.classList.remove('tide-mode');
+				}
+			} else {
+				const hour = new Date().getHours();
+				const isLightMode = hour >= 6 && hour < 18;
+				
+				if (isLightMode) {
+					document.body.classList.add('light-mode');
+					document.body.classList.remove('tide-mode');
+				} else {
+					document.body.classList.add('tide-mode');
+					document.body.classList.remove('light-mode');
+				}
+			}
+		}
+
+		// Set theme on load
+		setThemeBasedOnTime();
+	</script>
+</body>
+</html>

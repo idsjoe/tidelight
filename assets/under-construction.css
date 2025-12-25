@@ -1,0 +1,271 @@
+/*
+  Under Construction Page Styles
+  For the Glide in! login page
+*/
+
+/* Top Navigation */
+.top-nav {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 1000;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1.5rem 2rem;
+	background: linear-gradient(180deg, var(--bg-primary) 0%, transparent 100%);
+}
+
+.top-nav a {
+	color: var(--text-secondary);
+	text-decoration: none;
+	font-size: 0.9rem;
+	padding: 0.5rem 1rem;
+	border: 1px solid var(--text-secondary);
+	border-radius: 4px;
+	transition: all 0.2s ease;
+}
+
+.top-nav a:hover {
+	color: var(--accent);
+	border-color: var(--accent);
+}
+
+/* Construction Page Layout */
+.construction-page {
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 6rem 2rem 4rem;
+}
+
+.construction-content {
+	max-width: 600px;
+	width: 100%;
+	text-align: center;
+}
+
+/* Title */
+.construction-title {
+	font-size: 4rem;
+	font-weight: 700;
+	background: linear-gradient(135deg, var(--logo-light), var(--logo-light-2));
+	-webkit-background-clip: text;
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+	margin-bottom: 0.5rem;
+	animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+	from {
+		filter: drop-shadow(0 0 10px rgba(79, 163, 255, 0.3));
+	}
+	to {
+		filter: drop-shadow(0 0 20px rgba(79, 163, 255, 0.6));
+	}
+}
+
+.construction-subtitle {
+	font-size: 1.2rem;
+	color: var(--text-secondary);
+	margin-bottom: 2rem;
+}
+
+/* Status Badge */
+.status-badge {
+	display: inline-block;
+	padding: 0.75rem 1.5rem;
+	background: var(--accent);
+	color: white;
+	border-radius: 50px;
+	font-weight: 600;
+	margin-bottom: 3rem;
+	animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+	0%, 100% {
+		transform: scale(1);
+	}
+	50% {
+		transform: scale(1.05);
+	}
+}
+
+/* Half-built Login Form */
+.login-container {
+	background: var(--card-bg);
+	border-radius: 16px;
+	padding: 2rem;
+	margin-bottom: 3rem;
+	box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+body.tide-mode .login-container {
+	box-shadow: 0 4px 30px rgba(159, 103, 255, 0.2);
+}
+
+.form-element {
+	margin-bottom: 1.5rem;
+	text-align: left;
+}
+
+/* Partial - Half complete */
+.form-element.partial {
+	opacity: 0.7;
+}
+
+.form-element label {
+	display: block;
+	margin-bottom: 0.5rem;
+	color: var(--text-primary);
+	font-weight: 600;
+}
+
+.form-element input {
+	width: 100%;
+	padding: 0.75rem;
+	border: 2px dashed var(--accent);
+	border-radius: 8px;
+	background: var(--bg-secondary);
+	color: var(--text-primary);
+	font-size: 1rem;
+}
+
+/* Skeleton - Loading state */
+.form-element.skeleton {
+	opacity: 0.5;
+}
+
+.skeleton-label {
+	height: 20px;
+	width: 100px;
+	background: linear-gradient(90deg, var(--bg-secondary) 25%, var(--card-bg) 50%, var(--bg-secondary) 75%);
+	background-size: 200% 100%;
+	border-radius: 4px;
+	margin-bottom: 0.5rem;
+	animation: skeleton-loading 1.5s ease-in-out infinite;
+}
+
+.skeleton-input {
+	height: 45px;
+	width: 100%;
+	background: linear-gradient(90deg, var(--bg-secondary) 25%, var(--card-bg) 50%, var(--bg-secondary) 75%);
+	background-size: 200% 100%;
+	border-radius: 8px;
+	animation: skeleton-loading 1.5s ease-in-out infinite;
+}
+
+@keyframes skeleton-loading {
+	0% {
+		background-position: 200% 0;
+	}
+	100% {
+		background-position: -200% 0;
+	}
+}
+
+/* Wireframe - Blueprint style */
+.form-element.wireframe {
+	opacity: 0.4;
+}
+
+.wireframe-box {
+	border: 2px dashed var(--text-secondary);
+	padding: 1rem;
+	border-radius: 8px;
+	color: var(--text-secondary);
+	font-family: monospace;
+	text-align: center;
+}
+
+/* Construction Note */
+.construction-note {
+	margin-top: 2rem;
+	padding-top: 2rem;
+	border-top: 2px dashed var(--accent);
+	color: var(--text-secondary);
+}
+
+.construction-note p {
+	margin: 0.5rem 0;
+}
+
+.small-text {
+	font-size: 0.9rem;
+	opacity: 0.7;
+}
+
+/* Progress Section */
+.progress-section {
+	margin-bottom: 2rem;
+}
+
+.progress-label {
+	color: var(--text-primary);
+	font-weight: 600;
+	margin-bottom: 0.75rem;
+}
+
+.progress-bar {
+	width: 100%;
+	height: 20px;
+	background: var(--bg-secondary);
+	border-radius: 10px;
+	overflow: hidden;
+	margin-bottom: 0.5rem;
+}
+
+.progress-fill {
+	height: 100%;
+	background: linear-gradient(90deg, var(--accent), var(--accent-hover));
+	border-radius: 10px;
+	transition: width 0.3s ease;
+	animation: progress-shine 2s ease-in-out infinite;
+}
+
+@keyframes progress-shine {
+	0%, 100% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0.8;
+	}
+}
+
+.progress-text {
+	color: var(--text-secondary);
+	font-size: 0.9rem;
+}
+
+/* Tools Section */
+.tools-section {
+	display: flex;
+	justify-content: center;
+	gap: 2rem;
+	font-size: 2rem;
+}
+
+.tool {
+	display: inline-block;
+	transition: transform 0.3s ease;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+	.construction-title {
+		font-size: 3rem;
+	}
+
+	.login-container {
+		padding: 1.5rem;
+	}
+
+	.tools-section {
+		gap: 1rem;
+		font-size: 1.5rem;
+	}
+}

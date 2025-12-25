@@ -1,0 +1,103 @@
+/*
+  The Moonlit Senet Theme
+  Euphoric, ultraviolet, mysterious - Deep night sky with neon gaming vibes
+*/
+
+/* Override theme colors for Moonlit Senet */
+body {
+	--bg-primary: #0B0E14;
+	--bg-secondary: #1A1C2C;
+	--card-bg: #1A1C2C;
+	--text-primary: #E2E8F0;
+	--text-secondary: #94A3B8;
+	--accent: #7C3AED;
+	--accent-hover: #7C3AED;
+	--whimsical-highlight: rgba(124, 58, 237, 0.15);
+}
+
+/* Override body background */
+body {
+	background-color: #0B0E14;
+	background-image: radial-gradient(circle at 50% 25%, rgba(124, 58, 237, 0.2) 0%, rgba(26, 28, 44, 0.3) 45%, #0B0E14 75%, #0B0E14 100%);
+	background-attachment: fixed;
+}
+
+/* Moonlit Senet title with new gradient */
+.senet-title {
+	font-family: 'Metal Mania', cursive;
+	font-size: 3.6rem;
+	background: linear-gradient(135deg, #9F67FF, #2DD4BF);
+	-webkit-background-clip: text;
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+body .senet-title {
+	text-shadow: 0 0 20px rgba(159, 103, 255, 0.4);
+}
+
+/* Featured card styling */
+.featured-card {
+	background: #1A1C2C;
+	box-shadow: 0 4px 20px rgba(124, 58, 237, 0.3);
+}
+
+.featured-card:hover {
+	box-shadow: 0 12px 40px rgba(124, 58, 237, 0.5);
+	transform: translateY(-8px);
+}
+
+/* Post cards */
+.post-card {
+	background: #1A1C2C;
+	box-shadow: 0 2px 10px rgba(124, 58, 237, 0.2);
+}
+
+.post-card:hover {
+	box-shadow: 0 6px 20px rgba(124, 58, 237, 0.5);
+}
+
+/* Date badges */
+.post-date {
+	color: #7C3AED;
+}
+
+/* Section divider */
+.section-title::after {
+	background: #7C3AED;
+}
+
+/* Navigation buttons */
+.top-nav a {
+	color: #94A3B8;
+	border-color: #94A3B8;
+}
+
+.top-nav a:hover {
+	color: #7C3AED;
+	border-color: #7C3AED;
+}
+
+/* Read more link */
+.read-more {
+	color: #7C3AED;
+}
+
+/* Primary text elements */
+.post-title,
+.post-card-content h3,
+.section-title {
+	color: #E2E8F0;
+}
+
+/* Secondary text */
+.post-excerpt,
+.post-card-content p,
+.listing-tagline {
+	color: #94A3B8;
+}
+
+/* Top nav gradient background for dark theme */
+.top-nav {
+	background: linear-gradient(180deg, #0B0E14 0%, transparent 100%);
+}
