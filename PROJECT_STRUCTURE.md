@@ -18,7 +18,8 @@ tidelight/
 │
 ├── blogs/                          # Individual blog posts organized by blog type
 │   ├── sunrise-lyra/              # Daily music blog posts
-│   │   └── hotel-california.html  # First blog post - Hotel California
+│   │   ├── 001-hotel-california.html  # #001 - Hotel California by The Eagles (Dec 25)
+│   │   └── 002-running-up-that-hill.html # #002 - Running Up That Hill by Kate Bush (Dec 26)
 │   ├── highnoon-parchment/        # Weekly book blog posts
 │   │   └── coming-soon.html       # Placeholder post
 │   └── moonlit-senet/             # Monthly game blog posts
@@ -34,7 +35,8 @@ tidelight/
 │
 └── BlogFormat/                     # Markdown drafts and content source files
     ├── TheSunriseLyra/            # Sunrise Lyra markdown drafts
-    │   └── hotel-california.md    # Source content for Hotel California post
+    │   ├── #001-hotel-california.md    # Source content for Hotel California post
+    │   └── #002-running-up-that-hill.md # Source content for Running Up That Hill post
     ├── TheHighnoonParchment/      # Highnoon Parchment markdown drafts
     └── TheMoonlitSenet/           # Moonlit Senet markdown drafts
 ```
@@ -42,7 +44,7 @@ tidelight/
 ## File Descriptions
 
 ### Root Files
-- **index.html** - Main landing page featuring Tide/Light branding and three clickable blog cards (Sunrise Lyra, Highnoon Parchment, Moonlit Senet)
+- **index.html** - Main landing page featuring Tide/Light branding and three clickable blog cards (Sunrise Lyra, Highnoon Parchment, Moonlit Senet). Includes Open Graph meta tags for social media previews.
 - **styles.css** - Complete styling for the landing page including time-based theme switching (Tide/Light modes)
 - **vercel.json** - Vercel deployment configuration for clean URLs
 - **README.md** - Project documentation
@@ -51,7 +53,7 @@ tidelight/
 
 ### pages/
 Contains blog listing pages that show all posts for each blog category, plus the about page.
-- **sunrise-lyra.html** - Daily music blog listing with featured latest post and grid of past posts (sunrise theme)
+- **sunrise-lyra.html** - Daily music blog listing with featured latest post and grid of past posts (sunrise theme). Currently showing 2 posts with "Previous Posts" section.
 - **highnoon-parchment.html** - Weekly book blog listing with featured latest post (parchment/mid-day theme)
 - **moonlit-senet.html** - Monthly game blog listing with featured latest post (moonlit night theme)
 - **about.html** - "Glide in!" under-construction login page (forced light mode, half-built UI elements)
@@ -59,7 +61,8 @@ Contains blog listing pages that show all posts for each blog category, plus the
 ### blogs/
 Contains individual blog post files, organized by blog type into subdirectories.
 - **sunrise-lyra/** - Daily music blog posts
-  - hotel-california.html - Blog post: Hotel California by Eagles
+  - 001-hotel-california.html - #001: Hotel California by The Eagles (Dec 25, 2025)
+  - 002-running-up-that-hill.html - #002: Running Up That Hill by Kate Bush (Dec 26, 2025)
 - **highnoon-parchment/** - Weekly book blog posts
   - coming-soon.html - Placeholder post
 - **moonlit-senet/** - Monthly game blog posts
